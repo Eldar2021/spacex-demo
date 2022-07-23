@@ -24,6 +24,8 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.0.3
+  build_runner: ^2.1.11
+  flutter_gen_runner: ^4.3.0
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
@@ -32,3 +34,20 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_gen:
+  output: lib/src/gen/
+  line_length: 80
+  
+  integrations:
+    flutter_svg: false
+    flare_flutter: false
+    rive: false
+
+  assets:
+    enabled: true
+    package_parameter_enabled: false
