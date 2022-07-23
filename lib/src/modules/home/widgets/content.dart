@@ -16,14 +16,14 @@ class Content extends StatelessWidget {
             child: SpacexCategoryCard(
               image: Assets.images.imgSpacexRocket.path,
               title: context.l10n.rocketSpaceXTileTitle,
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(RocketsPage.route()),
             ),
           ),
           _CardItem(
             child: SpacexCategoryCard(
               image: Assets.images.imgSpacexCrew.path,
               title: context.l10n.crewSpaceXTileTitle,
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(CrewPage.route()),
             ),
           ),
         ],
