@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spacex_demo/src/modules/home/widgets/spacex_category_card.dart';
+import 'package:spacex_demo/src/src.dart';
+
+import 'spacex_category_card.dart';
 
 class Content extends StatelessWidget {
   const Content({super.key});
@@ -12,16 +14,15 @@ class Content extends StatelessWidget {
         children: [
           _CardItem(
             child: SpacexCategoryCard(
-              image: '',
-              title: '',
+              image: Assets.images.imgSpacexRocket.path,
+              title: context.l10n.rocketSpaceXTileTitle,
               onTap: () {},
             ),
           ),
-
           _CardItem(
             child: SpacexCategoryCard(
-              image: '',
-              title: '',
+              image: Assets.images.imgSpacexCrew.path,
+              title: context.l10n.crewSpaceXTileTitle,
               onTap: () {},
             ),
           ),
