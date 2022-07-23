@@ -3,8 +3,8 @@ import 'package:spacex_demo/src/src.dart';
 
 import '../widgets/home_widgets.dart';
 
-class HimeView extends StatelessWidget {
-  const HimeView({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
