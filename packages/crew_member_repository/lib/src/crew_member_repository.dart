@@ -11,7 +11,7 @@ class CrewMemberRepository {
 
   Future<List<CrewMember>> fetchCrews() async {
     try {
-      return _api.getList<CrewMember>('/v4/rockets', CrewMember.fromJson);
+      return _api.getList<CrewMember>('/v4/crew', CrewMember.fromJson);
     } catch (e) {
       throw CrewMemberException(e.toString());
     }
