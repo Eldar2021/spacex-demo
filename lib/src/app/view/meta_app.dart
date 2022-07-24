@@ -35,7 +35,7 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: const SpacexTheme(AppColors.primary).light(),
+      theme: const SpacexTheme(AppColors.primary).dark(),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
