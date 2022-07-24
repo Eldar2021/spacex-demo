@@ -523,6 +523,13 @@ packages:
       relative: true
     source: path
     version: "1.0.0+1"
+  spacex_theme:
+    dependency: "direct main"
+    description:
+      path: "packages/spacex_theme"
+      relative: true
+    source: path
+    version: "1.0.0+1"
   stack_trace:
     dependency: transitive
     description:

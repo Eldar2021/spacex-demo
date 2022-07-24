@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:rocket_repository/rocket_repository.dart';
+import 'package:spacex_theme/spacex_theme.dart';
 
 import '../../src.dart';
 
@@ -34,24 +35,7 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          brightness: Brightness.dark,
-          secondary: Colors.white,
-        ),
-        primaryColor: Colors.black,
-        scaffoldBackgroundColor: Colors.black,
-        dividerTheme: const DividerThemeData(
-          indent: 16,
-          space: 0,
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
-            onPrimary: Colors.black,
-          ),
-        ),
-      ),
+      theme: const SpacexTheme(AppColors.primary).light(),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

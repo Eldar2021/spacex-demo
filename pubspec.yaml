@@ -20,7 +20,9 @@ dependencies:
   rocket_repository:
     path: packages/rocket_repository
   spacex_api:
-    path: packages/spacex_api  
+    path: packages/spacex_api
+  spacex_theme:
+    path: packages/spacex_theme    
   url_launcher: ^6.1.5
 
 dev_dependencies:

@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:spacex_theme/src/components/components.dart';
 
 class SpacexTheme with CompomnentTheme {
-  const SpacexTheme({required this.color, required this.mode});
+  const SpacexTheme(this.color);
 
   final Color color;
-  final bool mode;
 
   // static const pageTransitionsTheme = PageTransitionsTheme(
   //   builders: <TargetPlatform, PageTransitionsBuilder>{
@@ -19,15 +18,12 @@ class SpacexTheme with CompomnentTheme {
   //   },
   // );
 
-  ColorScheme colors() {
-    return ColorScheme.fromSeed(
-      seedColor: color,
-      brightness: mode ? Brightness.light : Brightness.dark,
-    );
+  ColorScheme colors(Brightness brightness) {
+    return ColorScheme.fromSeed(seedColor: color, brightness: brightness);
   }
 
   ThemeData light([Color? targetColor]) {
-    final scheme = colors();
+    final scheme = colors(Brightness.light);
     return ThemeData.light().copyWith(
       colorScheme: scheme,
       appBarTheme: appBarTheme(scheme),
@@ -47,7 +43,7 @@ class SpacexTheme with CompomnentTheme {
   }
 
   ThemeData dark([Color? targetColor]) {
-    final scheme = colors();
+    final scheme = colors(Brightness.dark);
     return ThemeData.dark().copyWith(
       colorScheme: scheme,
       appBarTheme: appBarTheme(scheme),
@@ -65,9 +61,5 @@ class SpacexTheme with CompomnentTheme {
     );
   }
 
-  ThemeData get theme => mode ? light() : dark();
-
-  SpacexTheme copy({Color? newColor, bool? newMode}) {
-    return SpacexTheme(color: newColor ?? color, mode: newMode ?? mode);
-  }
+  SpacexTheme copy([Color? newColor]) => SpacexTheme(newColor ?? color);
 }

@@ -6,7 +6,7 @@ import 'package:spacex_theme/spacex_theme.dart';
 void main() {
   group('SpacexTheme', () {
     test('can be instantiated', () {
-      expect(SpacexTheme(color: Colors.amber, mode: true), isNotNull);
+      expect(SpacexTheme(Colors.amber), isNotNull);
     });
   });
 }
