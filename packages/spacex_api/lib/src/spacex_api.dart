@@ -5,7 +5,6 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:spacex_api/src/exceptions/exceptions.dart';
-import 'package:spacex_api/src/models/models.dart';
 
 class SpacexApi {
   SpacexApi([http.Client? client]) : _client = client ?? http.Client();
@@ -15,15 +14,7 @@ class SpacexApi {
 
   final http.Client _client;
 
-  Future<List<Rocket>> getRockets() async {
-    return _getList<Rocket>('/v4/rockets', Rocket.fromJson);
-  }
-
-  Future<List<CrewMember>> getCrews() async {
-    return _getList<CrewMember>('/v4/crew', CrewMember.fromJson);
-  }
-
-  Future<List<T>> _getList<T>(
+  Future<List<T>> getList<T>(
     String url,
     T Function(Map<String, dynamic> json) fromJson,
   ) async {
