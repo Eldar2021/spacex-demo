@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spacex_api/spacex_api.dart';
+import 'package:rocket_repository/rocket_repository.dart';
 
 class RocketList extends StatelessWidget {
   const RocketList({super.key, required this.rockets});

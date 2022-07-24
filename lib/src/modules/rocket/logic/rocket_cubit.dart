@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:rocket_repository/rocket_repository.dart';
-import 'package:spacex_api/spacex_api.dart';
 import 'package:spacex_demo/src/utils/utils.dart';
 
 part 'rocket_state.dart';

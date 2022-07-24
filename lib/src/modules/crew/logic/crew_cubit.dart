@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:crew_member_repository/crew_member_repository.dart';
 import 'package:equatable/equatable.dart';
-import 'package:spacex_api/spacex_api.dart';
 
 import '../../../src.dart';
 

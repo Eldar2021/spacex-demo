@@ -19,10 +19,8 @@ dependencies:
   intl: ^0.17.0
   rocket_repository:
     path: packages/rocket_repository
-  spacex_api:
-    path: packages/spacex_api
   spacex_theme:
-    path: packages/spacex_theme    
+    path: packages/spacex_theme
   url_launcher: ^6.1.5
 
 dev_dependencies:
@@ -45,7 +43,7 @@ flutter:
 flutter_gen:
   output: lib/src/gen/
   line_length: 80
-  
+
   integrations:
     flutter_svg: false
     flare_flutter: false

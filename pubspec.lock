@@ -517,7 +517,7 @@ packages:
     source: hosted
     version: "1.8.2"
   spacex_api:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "packages/spacex_api"
       relative: true
